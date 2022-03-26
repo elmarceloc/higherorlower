@@ -1,0 +1,28 @@
+{
+    "name": "higherlowergame with chat",
+    "description": "Hightlight some pre defined text after page loads",
+    "version": "0.1",
+    "browser_action": {
+       
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.higherlowergame.com/*"
+            ],
+            "js": ["tmi.min.js","higherorlower.js"],
+            "css": ["chat.css"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "http://www.either.io/*"
+            ],
+            "js": ["tmi.min.js","either.js"],
+            "css": ["chat.css"],
+            "run_at": "document_end"
+        }
+    
+    ], 
+    "manifest_version": 2
+}
